@@ -37,7 +37,7 @@ body {
     width: 115px;
     height: 28px;
     left: 40px;
-    top: 40px;
+    top: 5vh;
 }
 
 .container {
@@ -46,15 +46,12 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    padding: 119px;
+    padding: 5vw;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
     border-radius: 4px;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    max-width: 572px;
-}
-
-.contentcontainer {
-    width: 334px;
 }
 
 .login {
@@ -72,16 +69,18 @@ body {
     margin-top: 5px;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    margin-bottom: 27px;
+    margin-bottom: 3vh;
 }
 
 input[type=text] {
-    width: 334px;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    width: calc(30vw - 37px);
+    padding-top: 2vh;
+    padding-bottom: 2vh;
     border-radius: 4px;
     border: 1px solid #868686;
     background-color: transparent;
+    color: white;
+    padding-left: 37px;
 }
 
 input::placeholder {
@@ -90,7 +89,13 @@ input::placeholder {
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
-    padding-left: 37px;
+    /* padding-left: 37px; */
+}
+
+input:focus {
+    border: 1px solid #FFC632;
+    outline-color: #ffde88;
+    outline: 1;
 }
 
 .inputtitle {
@@ -111,14 +116,15 @@ input::placeholder {
 
 .inputicon {
     position: absolute;
-    top: 12px;
-    left: 12px;
+    top: 1.8vh;
+    left: 1vmax;
 }
 
 .eyepassword {
     position: absolute;
-    right: 12px;
-    top: 12px;
+    right: 1vw;
+    top: 1.8vh;
+    cursor: pointer;
 }
 
 .lembretext {
@@ -179,7 +185,7 @@ label input:checked+span {
 
 .container1 input:checked~.checkmark {
     background-color: #FFC632;
-    border: #FFC632;
+    border: 1px solid #FFC632;
     transition: all .25s;
 }
 
@@ -197,7 +203,7 @@ label input:checked+span {
 
 .container1 .checkmark:after {
     left: 30%;
-    top: 10%;
+    top: 0.2vh;
     width: 6px;
     height: 12px;
     border: solid #473404;
@@ -217,6 +223,7 @@ label input:checked+span {
     font-weight: 600;
     font-size: 14px;
     line-height: 21px;
+    cursor: pointer;
 }
 
 .footerForm {
@@ -229,19 +236,25 @@ label input:checked+span {
 
 .btn {
     width: 100%;
-    padding: 12px;
+    padding: 1.5vh;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 18px;
     line-height: 27px;
     /* identical to box height */
-
+    cursor: pointer;
     letter-spacing: 0.015em;
     text-transform: uppercase;
     background: #FFC632;
     color: #473404;
     border: none;
     border-radius: 4px;
+    transition: all .25s;
+}
+
+.btn:hover {
+    background: #fabb1d;
+    color: #291e02;
 }
 
 .descFooter {
@@ -251,4 +264,35 @@ label input:checked+span {
     font-size: 14px;
     line-height: 21px;
     color: #FFC632;
+    cursor: pointer;
+}
+
+.focusIcon {
+    display: none;
+}
+
+@media (max-width: 837px) {
+    .container {
+        background-color: transparent;
+        width: 90%;
+        top: 40%;
+    }
+
+    .side-image {
+        display: none;
+    }
+
+    .sideform {
+        float: unset;
+        width: 100vw;
+    }
+
+    .formcontent {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    input[type=text] {
+        width: calc(100% - 37px)
+    }
 }
