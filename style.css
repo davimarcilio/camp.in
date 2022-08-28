@@ -72,7 +72,8 @@ body {
     margin-bottom: 3vh;
 }
 
-input[type=text] {
+input[type=text],
+input[type=password] {
     width: calc(30vw - 37px);
     padding-top: 2vh;
     padding-bottom: 2vh;
@@ -271,6 +272,10 @@ label input:checked+span {
     display: none;
 }
 
+.slash {
+    display: none;
+}
+
 @media (max-width: 837px) {
     .container {
         background-color: transparent;
@@ -292,7 +297,8 @@ label input:checked+span {
         box-sizing: border-box;
     }
 
-    input[type=text] {
+    input[type=text],
+    input[type=password] {
         width: calc(100% - 37px)
     }
 }
